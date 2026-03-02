@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "type": "module",
   "private": false,
+  "license": "MIT",
   "keywords": [
     "pi-package",
     "pi-theme",
@@ -21,10 +22,25 @@
     "image": "https://assets.aliou.me/pi-extensions/demos/pi-jellybeans-mono.png"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "provenance": true
   },
   "files": [
     "*.json",
     "README.md"
-  ]
+  ],
+  "scripts": {
+    "lint": "biome check .",
+    "format": "biome check --write .",
+    "typecheck": "echo 'No typecheck step for JSON-only theme package'",
+    "test": "node scripts/test-theme-json.mjs",
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "pnpm changeset publish"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.4.3",
+    "@changesets/cli": "^2.27.11"
+  },
+  "packageManager": "pnpm@10.26.1"
 }
