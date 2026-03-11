@@ -1,5 +1,11 @@
 # @aliou/pi-theme-jellybeans
 
+## 0.1.4
+
+### Patch Changes
+
+- f3101be: Add a package description so the published theme page can display summary text.
+
 ## 0.1.2
 
 ### Patch Changes
